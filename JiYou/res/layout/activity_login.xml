@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:genius="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_skin"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_skin"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_title"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_login_back"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/icon_arrow_left_white"
+                    android:contentDescription="@string/txt_setting" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txt_login_title"
+                android:textColor="@color/color_white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/layout_login_register"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_title"
+                android:gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/txt_login_register"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <net.qiujuer.genius.widget.GeniusEditText
+                android:id="@+id/edt_login_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:digits="0123456789abcdefghigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/edt_login_username_hint"
+                android:inputType="textVisiblePassword"
+                android:textSize="14sp"
+                genius:g_borderWidth="1dp"
+                genius:g_fieldStyle="line"
+                genius:g_theme="@array/ClassicBlue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp" >
+
+            <net.qiujuer.genius.widget.GeniusEditText
+                android:id="@+id/edt_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:hint="@string/edt_login_password_hint"
+                android:inputType="textPassword"
+                android:textSize="14sp"
+                genius:g_borderWidth="1dp"
+                genius:g_fieldStyle="line"
+                genius:g_theme="@array/ClassicBlue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp" >
+
+            <net.qiujuer.genius.widget.GeniusButton
+                android:id="@+id/btn_login_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/btn_login_submit"
+                android:textSize="15sp"
+                genius:g_cornerRadii_A="10dp"
+                genius:g_cornerRadii_B="10dp"
+                genius:g_cornerRadii_C="10dp"
+                genius:g_cornerRadii_D="10dp"
+                genius:g_textAppearance="none"
+                genius:g_theme="@array/ScubaBlue" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

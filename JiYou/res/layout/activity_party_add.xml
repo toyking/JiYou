@@ -1,0 +1,315 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:genius="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:scrollbars="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:orientation="vertical" >
+
+        <!-- 标题 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_title"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/layout_party_add_cancel"
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:background="@color/color_title"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/txt_party_add_title"
+                    android:src="@drawable/icon_arrow_left_white" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/txt_party_add_title"
+                android:textColor="@color/color_white"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:background="@color/color_title"
+                android:gravity="center" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 主题 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_party_add_theme"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right" >
+
+                <net.qiujuer.genius.widget.GeniusEditText
+                    android:id="@+id/edt_party_add_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/edt_party_add_theme_hint"
+                    android:inputType="text"
+                    android:textColor="@color/color_light_blue"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="14sp"
+                    genius:g_fieldStyle="transparent"
+                    genius:g_showTitle="false"
+                    genius:g_theme="@array/StrawberryIce" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ADADAD"
+            android:padding="15dp" />
+
+        <!-- 时间 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_party_add_time"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right" >
+
+                <net.qiujuer.genius.widget.GeniusEditText
+                    android:id="@+id/edt_party_add_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/edt_square_add_time_hint"
+                    android:inputType="text"
+                    android:textColor="@color/color_light_blue"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="14sp"
+                    genius:g_fieldStyle="transparent"
+                    genius:g_showTitle="false"
+                    genius:g_theme="@array/StrawberryIce" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ADADAD"
+            android:padding="15dp" />
+
+        <!-- 地点 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_party_add_address"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right" >
+
+                <net.qiujuer.genius.widget.GeniusEditText
+                    android:id="@+id/edt_party_add_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/edt_party_add_address_hint"
+                    android:inputType="text"
+                    android:textColor="@color/color_light_blue"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="14sp"
+                    genius:g_fieldStyle="transparent"
+                    genius:g_showTitle="false"
+                    genius:g_theme="@array/StrawberryIce" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ADADAD"
+            android:padding="15dp" />
+
+        <!-- 人数 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_party_add_peoplenum"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right" >
+
+                <net.qiujuer.genius.widget.GeniusEditText
+                    android:id="@+id/edt_party_add_peoplenum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/edt_party_add_peoplenum_hint"
+                    android:inputType="number"
+                    android:textColor="@color/color_light_blue"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="14sp"
+                    genius:g_fieldStyle="transparent"
+                    genius:g_showTitle="false"
+                    genius:g_theme="@array/StrawberryIce" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ADADAD"
+            android:padding="15dp" />
+
+        <!-- 活动内容描述 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/txt_party_add_description"
+            android:textColor="#458B74"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ADADAD"
+            android:padding="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp" >
+
+            <net.qiujuer.genius.widget.GeniusEditText
+                android:id="@+id/edt_party_add_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edt_party_add_description_hint"
+                android:inputType="textMultiLine"
+                android:textColor="@color/color_light_blue"
+                android:textColorHint="@color/color_gray"
+                android:textSize="14sp"
+                genius:g_fieldStyle="transparent"
+                genius:g_showTitle="false"
+                genius:g_theme="@array/StrawberryIce" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#ADADAD"
+            android:padding="15dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp" >
+
+            <net.qiujuer.genius.widget.GeniusButton
+                android:id="@+id/btn_party_add_submit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="@string/btn_party_add_submit"
+                android:textSize="15sp"
+                genius:g_cornerRadii_A="10dp"
+                genius:g_cornerRadii_B="10dp"
+                genius:g_cornerRadii_C="10dp"
+                genius:g_cornerRadii_D="10dp"
+                genius:g_textAppearance="none"
+                genius:g_theme="@array/ScubaBlue" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
