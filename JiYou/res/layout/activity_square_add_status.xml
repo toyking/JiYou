@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:genius="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <!-- 底部 -->
+
+    <LinearLayout
+        android:id="@+id/layout_main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_skin"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/txt_square_add_status"
+                android:padding="10dp"
+                android:src="@drawable/icon_tool_photo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/txt_square_add_status"
+                android:padding="10dp"
+                android:src="@drawable/icon_tool_emotion" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/txt_square_add_status"
+                android:padding="10dp"
+                android:src="@drawable/icon_tool_aite" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_main_bottom"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical" >
+
+            <!-- 标题 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_title"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_square_add_status_cancel"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/color_title"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:contentDescription="@string/txt_square_add"
+                        android:src="@drawable/icon_cancel_white" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/txt_square_add_status"
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_square_add_status_ok"
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:contentDescription="@string/txt_square_add"
+                        android:src="@drawable/icon_ok_white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <!-- <net.qiujuer.genius.widget.GeniusEditText
+                    android:id="@+id/edt_square_add_status_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:hint="@string/square_add_status_content_hint"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textSize="14sp"
+                    genius:g_borderWidth="1dp"
+                    genius:g_fieldStyle="line"
+                    genius:g_theme="@array/ClassicBlue" /> -->
+                <net.qiujuer.genius.widget.GeniusEditText
+                    android:id="@+id/edt_square_add_status_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/square_add_status_content_hint"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingMultiplier="1.1"
+                    android:textColor="@color/color_black"
+                    android:textColorHint="@color/color_gray"
+                    android:textSize="16sp"
+                    genius:g_fieldStyle="transparent"
+                    genius:g_showTitle="false"
+                    genius:g_theme="@array/StrawberryIce" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
